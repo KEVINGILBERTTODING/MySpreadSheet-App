@@ -1,11 +1,15 @@
 <component name="libraryTable">
   <library name="Gradle: com.infideap.atomic:atomic:0.0.8@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/atomic-0.0.8.aar/df59cd47637dc21d2e28f5186abe3809/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/atomic-0.0.8.aar/df59cd47637dc21d2e28f5186abe3809/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/atomic-0.0.8.aar/df59cd47637dc21d2e28f5186abe3809/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/879daa6ca84875b3106b74f61bb239c8/transformed/jetified-atomic-0.0.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/879daa6ca84875b3106b74f61bb239c8/transformed/jetified-atomic-0.0.8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/879daa6ca84875b3106b74f61bb239c8/transformed/jetified-atomic-0.0.8/jars/classes.jar!/" />
     </CLASSES>
-    <JAVADOC />
-    <SOURCES />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.infideap.atomic/atomic/0.0.8/9c343bf6b8f2b1c01eedf2185d6fa08c8ae0bf8/atomic-0.0.8-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.infideap.atomic/atomic/0.0.8/22b3a19fb7927516fd847968d5acedf745f281b9/atomic-0.0.8-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

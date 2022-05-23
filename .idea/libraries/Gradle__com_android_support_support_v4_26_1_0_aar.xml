@@ -1,11 +1,14 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:support-v4:26.1.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/887b4a3c7da2d682f174049bd6107e9d/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/887b4a3c7da2d682f174049bd6107e9d/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-26.1.0.aar/887b4a3c7da2d682f174049bd6107e9d/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/36291b505ca9de49fe0ad70dfae37088/transformed/support-v4-26.1.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/36291b505ca9de49fe0ad70dfae37088/transformed/support-v4-26.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/36291b505ca9de49fe0ad70dfae37088/transformed/support-v4-26.1.0/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-v4/26.1.0/9c53eab3272b3b26583b17facac2e90d264b2788/support-v4-26.1.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
