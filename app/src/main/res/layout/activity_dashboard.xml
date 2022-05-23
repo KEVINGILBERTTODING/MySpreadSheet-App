@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_16sdp"
+    tools:context=".DashboardActivity">
+
+
+    <com.todkars.shimmer.ShimmerRecyclerView
+        android:id="@+id/recycler_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:shimmer_recycler_layout="@layout/item_list"
+        app:shimmer_recycler_item_count="10" />
+
+
+
+</RelativeLayout>
