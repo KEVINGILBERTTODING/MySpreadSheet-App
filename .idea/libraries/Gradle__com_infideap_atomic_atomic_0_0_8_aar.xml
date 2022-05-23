@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.infideap.atomic:atomic:0.0.8@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/atomic-0.0.8.aar/df59cd47637dc21d2e28f5186abe3809/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/atomic-0.0.8.aar/df59cd47637dc21d2e28f5186abe3809/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/atomic-0.0.8.aar/df59cd47637dc21d2e28f5186abe3809/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
