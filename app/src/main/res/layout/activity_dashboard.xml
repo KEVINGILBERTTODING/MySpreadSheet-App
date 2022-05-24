@@ -68,21 +68,21 @@
 
             <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                 android:id="@+id/swipe"
-                android:layout_below="@id/tv2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_below="@id/tv2"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:textSize="@dimen/_8sdp">
 
 
-            <com.todkars.shimmer.ShimmerRecyclerView
-                android:id="@+id/recycler_data"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:shimmer_recycler_item_count="10"
-                app:shimmer_recycler_layout="@layout/item_list" />
+                <com.todkars.shimmer.ShimmerRecyclerView
+                    android:id="@+id/recycler_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:shimmer_recycler_item_count="10"
+                    app:shimmer_recycler_layout="@layout/item_list_template" />
 
             </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

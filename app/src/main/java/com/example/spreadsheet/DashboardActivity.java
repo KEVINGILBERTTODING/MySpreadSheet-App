@@ -8,6 +8,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Toast;
 
@@ -110,6 +111,23 @@ public class DashboardActivity extends AppCompatActivity {
 
 
         mShimmerRecyclerView.setAdapter(dataAdapter);
+
+        mShimmerRecyclerView.setItemViewType((type, position) -> {
+            switch (type) {
+                case ShimmerRecyclerView.LAYOUT_GRID:
+                    return position % 2 == 0
+                            ? R.layout.item_list_template
+                            : R.layout.item_list_template;
+
+                default:
+                case ShimmerRecyclerView.LAYOUT_LIST:
+                    return position == 0 || position % 2 == 0
+                            ? R.layout.item_list_template
+                            : R.layout.item_list_template;
+            }
+        });
+
+        mShimmerRecyclerView.showShimmer(); // Menjalankan shimmer recyclerview
 
 
         layoutManager = new LinearLayoutManager(this);

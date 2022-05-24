@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="@dimen/_10sdp"
         app:cardUseCompatPadding="true"
-        app:cardBackgroundColor="@color/font"
+        app:cardBackgroundColor="@color/card2"
 
         >
         <RelativeLayout
@@ -23,28 +23,31 @@
                 android:id="@+id/img_profile"
                 android:layout_width="@dimen/_70sdp"
                 android:layout_height="@dimen/_70sdp"
-                android:layout_marginRight="@dimen/_5sdp"
-                android:src="@drawable/profile" />
+                android:src="@drawable/img_template"
+                android:layout_marginRight="@dimen/_5sdp" />
 
             <TextView
                 android:id="@+id/tv_nama"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:layout_toRightOf="@id/img_profile"
+                android:background="@color/font"
                 android:fontFamily="@font/popsem"
-                android:text="Kevin Gilbert"
                 android:textColor="@color/background"
                 android:textSize="@dimen/_13sdp" />
 
             <TextView
                 android:id="@+id/tv_email"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_13sdp"
                 android:layout_below="@+id/tv_nama"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_toRightOf="@id/img_profile"
+                android:background="@color/font"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:fontFamily="@font/popmed"
-                android:text="Kevin@gmail.com"
                 android:textColor="@color/main"
                 android:textSize="@dimen/_9sdp" />
             <TextView
@@ -65,11 +68,13 @@
             <TextView
                 android:id="@+id/tv_time"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_10sdp"
                 android:layout_below="@id/tv_email"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:layout_toRightOf="@id/img_profile"
+                android:background="@color/font"
                 android:fontFamily="@font/popmed"
-                android:text="2022-02-02"
                 android:textColor="#9D9D9B"
                 android:textSize="@dimen/_8sdp" />
 
