@@ -23,3 +23,21 @@
   
 </ul>
 
+<h2> How to use your spreadsheet file </h4>
+<ul>
+  <h4><li>Create a new spreadsheet file or use an existing spreadsheet file</li></h4>
+  <h4><li>Select the extension sub menu, then select the app script option</li></h4>
+  
+  ![image](https://user-images.githubusercontent.com/79959818/170149649-6500affe-960b-413e-b688-c5452ce45656.png)
+  
+  <h4><li>Select the extension sub menu, then select the app script option</li></h4>
+
+  <h4><li>Copy the code from the Code.gs file</li></h4>
+  
+  <h4><li>Then open the apotek app project, open ServerAPI.java in the app/src/main/java/utill/serverAPI.java folder, then replace the letter xxx with your ip address</li></h4>
+  <h4><li>User data in the database is empty, so you have to sign up by clicking on the sign up text on the login screen at the bottom of the login button</li></h4>
+  
+  <h2>Enjoy the app :blush: </h2>
+
+</ul>
+
