@@ -52,7 +52,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
         return dataModels.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView nama, email, jk, alamat, timestamp;
 
 
@@ -68,13 +68,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
             alamat          =       itemView.findViewById(R.id.tv_alamat);
             timestamp       =       itemView.findViewById(R.id.tv_time);
 
-            itemView.setOnClickListener(this);
+
 
         }
 
-        @Override
-        public void onClick(View view) {
-
-        }
     }
 }

@@ -107,4 +107,8 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+    public void back(View view) {
+        startActivity(new Intent(MainActivity.this, DashboardActivity.class));
+    }
 }

@@ -5,19 +5,102 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/_16sdp"
+    android:background="@color/background"
     tools:context=".DashboardActivity">
-
-
-    <com.todkars.shimmer.ShimmerRecyclerView
-        android:id="@+id/recycler_data"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:shimmer_recycler_layout="@layout/item_list"
-        app:shimmer_recycler_item_count="10" />
+        android:layout_margin="@dimen/_16sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:fontFamily="@font/popsem"
+                android:text="SpreadSheet"
+                android:textColor="@color/font"
+                android:textSize="@dimen/_15sdp" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_bar"
+                style="@style/AppSearchView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/bg_searchview"
+                android:focusable="false"
+                android:maxWidth="@dimen/_150sdp"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@drawable/bg_searchview"
+                app:queryHint="Search..."
+                app:searchIcon="@drawable/ic_search" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_70sdp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_container"
+            android:padding="@dimen/_16sdp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popsem"
+                android:text="List Pendaftar"
+                android:id="@+id/tv2"
+                android:textColor="@color/font"
+                android:textSize="@dimen/_13sdp" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe"
+                android:layout_below="@id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_8sdp">
 
 
+            <com.todkars.shimmer.ShimmerRecyclerView
+                android:id="@+id/recycler_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:shimmer_recycler_item_count="10"
+                app:shimmer_recycler_layout="@layout/item_list" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_add"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        app:shapeAppearanceOverlay="@style/fabCustomeShape"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:backgroundTint="@color/background"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        />
 
 </RelativeLayout>

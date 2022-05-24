@@ -4,13 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.spreadsheet.Adapter.DataAdapter;
 import com.example.spreadsheet.Model.DataModel;
 import com.example.spreadsheet.Utill.ApiInterfaces;
 import com.example.spreadsheet.Utill.DataApi;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.todkars.shimmer.ShimmerRecyclerView;
 
 import java.util.List;
@@ -26,6 +29,7 @@ public class DashboardActivity extends AppCompatActivity {
     private List<DataModel> dataModelList;
     private ApiInterfaces apiInterfaces;
     private ShimmerRecyclerView mShimmerRecyclerView;
+    FloatingActionButton fab;
 
 
     @Override
@@ -38,6 +42,28 @@ public class DashboardActivity extends AppCompatActivity {
         mShimmerRecyclerView.setLayoutManager(new LinearLayoutManager(this),
                 R.layout.item_list);
 
+        // Fungsi untuk menyembunyikan navbar
+
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+        // Inisialisasi fab
+        fab =   (FloatingActionButton) findViewById(R.id.btn_add) ;
+
+        // Fungsi saat fab di klik
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DashboardActivity.this, MainActivity.class));
+            }
+        });
+
+        // Set color fab tint
+
+        fab.setColorFilter(getResources().getColor(R.color.white));
+
+
         mShimmerRecyclerView.setAdapter(dataAdapter);
         // Inisialisasi recyclerview
 
@@ -46,6 +72,9 @@ public class DashboardActivity extends AppCompatActivity {
         mShimmerRecyclerView.setHasFixedSize(true);
 
         apiInterfaces = DataApi.getDataApi().create(ApiInterfaces.class);
+
+
+        // Memamanggil method getData
 
         getData();
 
