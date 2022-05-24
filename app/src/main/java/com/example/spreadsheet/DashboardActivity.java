@@ -3,6 +3,7 @@ package com.example.spreadsheet;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,6 +31,8 @@ public class DashboardActivity extends AppCompatActivity {
     private ApiInterfaces apiInterfaces;
     private ShimmerRecyclerView mShimmerRecyclerView;
     FloatingActionButton fab;
+
+    private SwipeRefreshLayout swipeRefreshLayout;
 
 
     @Override
@@ -59,9 +62,22 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
-        // Set color fab tint
+        // Mengubah warna tint fab
 
         fab.setColorFilter(getResources().getColor(R.color.white));
+
+
+        // Inisialisasi swiperefresh
+
+        swipeRefreshLayout = findViewById(R.id.swipe);
+
+        // Fungsi saat refresh
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                getData();
+            }
+        });
 
 
         mShimmerRecyclerView.setAdapter(dataAdapter);
@@ -92,7 +108,7 @@ public class DashboardActivity extends AppCompatActivity {
                 dataModelList = response.body();
                 dataAdapter = new DataAdapter(DashboardActivity.this, dataModelList);
                 mShimmerRecyclerView.setAdapter(dataAdapter);
-//                swipeRefreshLayout.setRefreshing(false);
+                swipeRefreshLayout.setRefreshing(false);
             }
 
 
@@ -102,9 +118,8 @@ public class DashboardActivity extends AppCompatActivity {
                 // Menampilkan toast saat no connection
 
                 Toast.makeText(DashboardActivity.this, "No connection, please try again", Toast.LENGTH_LONG).show();
-//                swipeRefreshLayout.setRefreshing(false);
+                swipeRefreshLayout.setRefreshing(false);
 
-//                Toast.makeText(MainActivity.this, "Error : "+ t.toString(), Toast.LENGTH_LONG).show();
             }
         });
     }
