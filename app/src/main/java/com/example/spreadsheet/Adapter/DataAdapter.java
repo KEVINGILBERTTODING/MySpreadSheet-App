@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.spreadsheet.Model.DataModel;
 import com.example.spreadsheet.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> {
@@ -51,6 +52,15 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.MyViewHolder> 
     public int getItemCount() {
         return dataModels.size();
     }
+
+
+
+    public void filterList(ArrayList<DataModel> filteredList) {
+
+        dataModels = filteredList;
+        notifyDataSetChanged();
+    }
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView nama, email, jk, alamat, timestamp;

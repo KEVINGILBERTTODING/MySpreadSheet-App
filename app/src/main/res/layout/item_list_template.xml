@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/font"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp"
+            >
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/tv_nama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_toRightOf="@id/img_profile"
+                android:fontFamily="@font/popsem"
+                android:text="Kevin Gilbert"
+                android:textColor="@color/background"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_nama"
+                android:layout_toRightOf="@id/img_profile"
+                android:fontFamily="@font/popmed"
+                android:text="Kevin@gmail.com"
+                android:textColor="@color/main"
+                android:textSize="@dimen/_9sdp" />
+            <TextView
+                android:id="@+id/tv_jk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Laki-laki"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/tv_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jl. Pembangunan"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_email"
+                android:layout_toRightOf="@id/img_profile"
+                android:fontFamily="@font/popmed"
+                android:text="2022-02-02"
+                android:textColor="#9D9D9B"
+                android:textSize="@dimen/_8sdp" />
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.example.spreadsheet;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -17,6 +18,7 @@ import com.example.spreadsheet.Utill.DataApi;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.todkars.shimmer.ShimmerRecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -33,6 +35,7 @@ public class DashboardActivity extends AppCompatActivity {
     FloatingActionButton fab;
 
     private SwipeRefreshLayout swipeRefreshLayout;
+    private SearchView searchView;
 
 
     @Override
@@ -40,10 +43,8 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        mShimmerRecyclerView = findViewById(R.id.recycler_data);
 
-        mShimmerRecyclerView.setLayoutManager(new LinearLayoutManager(this),
-                R.layout.item_list);
+
 
         // Fungsi untuk menyembunyikan navbar
 
@@ -51,10 +52,39 @@ public class DashboardActivity extends AppCompatActivity {
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|
                         View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
-        // Inisialisasi fab
-        fab =   (FloatingActionButton) findViewById(R.id.btn_add) ;
+        // Inisialisasi fab, swiperefresh, dan recyclerview
+
+        fab                     = (FloatingActionButton) findViewById(R.id.btn_add) ;
+        swipeRefreshLayout      = findViewById(R.id.swipe);
+        mShimmerRecyclerView    = findViewById(R.id.recycler_data);
+        searchView              = findViewById(R.id.search_bar);
+
+        searchView.clearFocus();
+
+         // Fungsi saat memasukkan kata ke dalam searchview
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String querry) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filter(newText);
+                return true;
+            }
+        });
+
+
+        // Mengatur shimmerecyclerview
+
+        mShimmerRecyclerView.setLayoutManager(new LinearLayoutManager(this),
+                R.layout.item_list);
+
 
         // Fungsi saat fab di klik
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,16 +92,15 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+
         // Mengubah warna tint fab
 
         fab.setColorFilter(getResources().getColor(R.color.white));
 
 
-        // Inisialisasi swiperefresh
-
-        swipeRefreshLayout = findViewById(R.id.swipe);
 
         // Fungsi saat refresh
+
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -81,7 +110,7 @@ public class DashboardActivity extends AppCompatActivity {
 
 
         mShimmerRecyclerView.setAdapter(dataAdapter);
-        // Inisialisasi recyclerview
+
 
         layoutManager = new LinearLayoutManager(this);
         mShimmerRecyclerView.setLayoutManager(layoutManager);
@@ -97,6 +126,30 @@ public class DashboardActivity extends AppCompatActivity {
 
 
     }
+
+    private void filter(String newText) {
+
+        ArrayList<DataModel> filteredList = new ArrayList<>();
+
+        for (DataModel item : dataModelList) {
+            if (item.getNama().toLowerCase().contains(newText.toLowerCase())) {
+                filteredList.add(item);
+
+            }
+        }
+
+
+        dataAdapter.filterList(filteredList);
+
+
+        if (filteredList.isEmpty()) {
+            Toast.makeText(this, "Data tidak ditemukan", Toast.LENGTH_SHORT).show();
+        } else {
+            dataAdapter.filterList(filteredList);
+        }
+
+    }
+
 
     public void getData(){
         Call<List<DataModel>> call = apiInterfaces.getData();
@@ -117,10 +170,11 @@ public class DashboardActivity extends AppCompatActivity {
 
                 // Menampilkan toast saat no connection
 
-                Toast.makeText(DashboardActivity.this, "No connection, please try again", Toast.LENGTH_LONG).show();
+                Toast.makeText(DashboardActivity.this, "Tidak ada koneksi", Toast.LENGTH_LONG).show();
                 swipeRefreshLayout.setRefreshing(false);
 
             }
         });
     }
 }
+
