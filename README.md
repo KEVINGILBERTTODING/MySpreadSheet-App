@@ -32,7 +32,21 @@
   
   <h4><li>Select the extension sub menu, then select the app script option</li></h4>
 
-  <h4><li>Copy the code from the Code.gs file</li></h4>
+  <h4><li>Copy the code from the Code.gs file, from the link below :point_down</li></h4>
+  
+  https://github.com/KEVINGILBERTTODING/SpreadSheet-App/blob/development/Code.gs.txt
+  
+  <h4><li>Then paste it into your app script</li></h4>
+  
+  ![image](https://user-images.githubusercontent.com/79959818/170150677-a0228e11-c590-4900-ad5f-fae4957f6083.png)
+  
+  <h4><li>Then paste it into the app script and make sure to overwrite it with your spread sheet id</li></h4>
+  This is how to get your spreadsheet id
+
+  <h4><li>Then click the deploy button, select the type of web application. then grant access to anyone who can access.</li></h4>
+  
+  ![image](https://user-images.githubusercontent.com/79959818/170150917-a910aa8d-db2b-443b-a75e-068331e89665.png)
+
   
   <h4><li>Then open the apotek app project, open ServerAPI.java in the app/src/main/java/utill/serverAPI.java folder, then replace the letter xxx with your ip address</li></h4>
   <h4><li>User data in the database is empty, so you have to sign up by clicking on the sign up text on the login screen at the bottom of the login button</li></h4>
