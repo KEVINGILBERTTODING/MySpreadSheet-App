@@ -1,4 +1,4 @@
-# MySpreadSheet-App 	:blossom:
+# MySpreadSheet-App 	:sunrise:
 <h6> Version 1.1.0 Released date 2022-05-25</h6>
 
 <h4><b>MySpreadSheet</b> is a simple application for online data collection linked to google sheets.</h4>
@@ -10,14 +10,12 @@
 <ul>
   <h3><li>Main Dashboard  :sparkles:</li></h3>
   
-   ![Three-Column](https://user-images.githubusercontent.com/79959818/170148051-d6f3b72b-67fc-4595-9da0-de8a8e07bf01.png)
+  ![Three-Column](https://user-images.githubusercontent.com/79959818/170153571-51f7dfd9-ccb8-4b20-b4ec-16815b52dbd5.png)
 
   
    <h3><li>Create new data  :sparkles:</li></h3>
 
-
-
-![Three-Column (2)](https://user-images.githubusercontent.com/79959818/170148140-1a3aab7e-2060-4ef5-bee1-ea90f95b130a.png)
+![Three-Column (2)](https://user-images.githubusercontent.com/79959818/170153555-febbd63c-edca-40f2-b9cc-6ddcd333df2c.png)
 
 
   
