@@ -8,6 +8,12 @@
 <h2>App Views :eyes:</h2>
 
 <ul>
+  
+  <h3><li>Splash Screen :sparkles:</li></h3>
+  
+  ![Salmon and Cream Wedding Details Simple Presentation (1) 1](https://user-images.githubusercontent.com/79959818/170161766-4bfe5f1e-dbf0-4e11-a73b-26ad634ce402.png)
+
+  
   <h3><li>Main Dashboard  :sparkles:</li></h3>
   
   ![Three-Column](https://user-images.githubusercontent.com/79959818/170153571-51f7dfd9-ccb8-4b20-b4ec-16815b52dbd5.png)
