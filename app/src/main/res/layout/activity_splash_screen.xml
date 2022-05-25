@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wave"
+    tools:context=".SplashScreen">
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_180sdp"
+        android:fontFamily="@font/popsem"
+        android:src="@drawable/main_icon"
+        android:text="MySpreadSheet"
+        android:textColor="@color/font" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/popsem"
+        android:layout_below="@id/img"
+        android:text="MySpreadSheet"
+        android:textColor="@color/font"
+        android:textSize="@dimen/_13sdp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/popmed"
+        android:textColor="@color/font"
+        android:text="application for online data collection linked to google sheets"
+        android:textSize="@dimen/_7sdp" />
+
+
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/laodingBar"
+        style="@style/AVLoadingIndicatorView.Small"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:visibility="visible"
+        app:indicatorColor="@color/font"
+        app:indicatorName="BallScaleMultipleIndicator" />
+
+
+
+</RelativeLayout>

@@ -1,6 +1,6 @@
 function doPost(e){
     //fill your id
-  var id = SpreadsheetApp.openById('1SrLjs7GCCzxMmtkYW_60JwGhZ89SRnzw8jqD8tv-BxY'); 
+  var id = SpreadsheetApp.openById('Your SpreadSheet ID'); 
   
   var timestamp = Utilities.formatDate(new Date(), "GMT+7",
 "MM/dd/yyyy HH:mm:ss");
@@ -37,7 +37,7 @@ var doc = SpreadsheetApp.getActiveSpreadsheet();
 SCRIPT_PROP.setProperty("key", doc.getId());
 }
 function read_all_value(request){
-var ss =SpreadsheetApp.openById('1SrLjs7GCCzxMmtkYW_60JwGhZ89SRnzw8jqD8tv-BxY');
+var ss =SpreadsheetApp.openById('Your SpreadSheet ID');
 //Spreadsheet ID diambil dari alamat GoogleSheet, cek point 6 
 var output = ContentService.createTextOutput(),
 data = {};
@@ -103,7 +103,7 @@ return sh.getRange(1, 1, 1, sh.getLastColumn()).getValues()[0];
 function doPost(e){
   
   //fill your id
-  var id = SpreadsheetApp.openById('1SrLjs7GCCzxMmtkYW_60JwGhZ89SRnzw8jqD8tv-BxY'); 
+  var id = SpreadsheetApp.openById('Your SpreadSheet ID'); 
   var timestamp = Utilities.formatDate(new Date(), "GMT+7",
 "MM/dd/yyyy HH:mm:ss");
   var nama = e.parameter.nama;

@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
 
             Atom.with(MainActivity.this)
+
+                    // Replace with ur spreadsheet URL
                     .load("https://script.google.com/macros/s/AKfycbzMH-b83qggt6sfwxmEN9HxgYjw4Q-ffxbHTKbnX0RNbzWNlkNKde-56cLQ2OqfmDhyiw/exec")
                     .setMultipart("nama", name)
                     .setMultipart("email", email)

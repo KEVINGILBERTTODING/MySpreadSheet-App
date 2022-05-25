@@ -7,22 +7,23 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/_10sdp"
-        app:cardUseCompatPadding="true"
         app:cardBackgroundColor="@color/font"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardUseCompatPadding="true"
 
         >
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/_5sdp"
-            >
+            android:padding="@dimen/_5sdp">
 
             <ImageView
                 android:id="@+id/img_profile"
-                android:layout_width="@dimen/_70sdp"
-                android:layout_height="@dimen/_70sdp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerVertical="true"
                 android:layout_marginRight="@dimen/_5sdp"
                 android:src="@drawable/profile" />
 
@@ -30,12 +31,12 @@
                 android:id="@+id/tv_nama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:layout_toRightOf="@id/img_profile"
                 android:fontFamily="@font/popsem"
                 android:text="Kevin Gilbert"
                 android:textColor="@color/background"
-                android:textSize="@dimen/_13sdp" />
+                android:textSize="@dimen/_11sdp" />
 
             <TextView
                 android:id="@+id/tv_email"
@@ -46,21 +47,21 @@
                 android:fontFamily="@font/popmed"
                 android:text="Kevin@gmail.com"
                 android:textColor="@color/main"
-                android:textSize="@dimen/_9sdp" />
+                android:textSize="@dimen/_8sdp" />
+
             <TextView
                 android:id="@+id/tv_jk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Laki-laki"
-                android:visibility="gone"
-                />
+                android:visibility="gone" />
+
             <TextView
                 android:id="@+id/tv_alamat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jl. Pembangunan"
-                android:visibility="gone"
-                />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tv_time"
@@ -71,11 +72,9 @@
                 android:fontFamily="@font/popmed"
                 android:text="2022-02-02"
                 android:textColor="#9D9D9B"
-                android:textSize="@dimen/_8sdp" />
+                android:textSize="@dimen/_7sdp" />
 
         </RelativeLayout>
-
-
 
 
     </androidx.cardview.widget.CardView>

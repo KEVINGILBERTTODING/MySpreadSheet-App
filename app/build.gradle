@@ -73,4 +73,8 @@ dependencies {
     // Dependencies for swiperefresh
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
 
+    // Dependencies for loading bar
+
+    implementation 'com.wang.avi:library:2.1.3'
+
 }
